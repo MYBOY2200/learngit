@@ -24,5 +24,5 @@ git commit -m 'xxx'
 git push -u origin master 
 (-u本地会与远程建立追踪 并指定默认主机 以后就可以不加任何参数使用git push)
 
-7.查看状态
+7.查看状态。
 git status
