@@ -29,3 +29,6 @@ git status
 
 8.清除已经存在的远程仓库
 git remote rm origin
+
+9.查看当前分支
+git branch -vv
