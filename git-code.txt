@@ -26,3 +26,6 @@ git push -u origin master
 
 7.查看状态..
 git status
+
+8.清除已经存在的远程仓库
+git remote rm origin
