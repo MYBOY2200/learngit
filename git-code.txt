@@ -32,3 +32,15 @@ git remote rm origin
 
 9.查看当前分支
 git branch -vv
+
+注意：
+    1）如果是新建一个文件夹再Init再add remote这种方式连接远程仓库，如果远程仓库本来有东西(比如有个readme)，
+    本地新的空仓库又写了新东西(我的代码)，不能直接push提交代码(需要先pull合并,因为有冲突),如果是不相关历史commit也无法pull合并(正常情况可以直接pull)
+    建议1：空的本地仓库先pull，再添加新文件，再Push到远程
+    建议2: 如果是不相关历史commit无法pull合并，用git pull origin master --allow-unrelated-histories 强制合并
+    建议3：clone远程仓库，添加新文件，再push(推荐！！！！！！)
+
+    2)本地的nurse分支是推送到远程的nurse分支，若想从本地nurse推送到远程master分支的代码，需要本地nurse提交到远程nurse,然后本地master分支下pull了远程nurse分支的代码，
+    然后再推送到远程master(本地和远程的分支提交是一一对应的，拉取是可以交叉)
+
+    3)git clone可以把远程仓库所有分支都拷贝到本地仓库，用git checkout切换即可
